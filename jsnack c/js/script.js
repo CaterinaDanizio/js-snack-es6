@@ -4,7 +4,7 @@
 
 // Array squadre
 
-var footballTeam =  [
+const footballTeam =  [
   {
    'nome': "Milan",
    'punti': 0,
@@ -40,29 +40,10 @@ console.log(footballTeam);
 
 // Generare numeri random al posto degli 0 nelle proprietà: punti fatti e falli subiti
 
-
-for (var key in footballTeam) {
-  footballTeam[key].punti = Math.floor(Math.random() * 10 +1);
-  footballTeam[key].falli = Math.floor(Math.random() * 10 +1);
-}
-
-console.log(footballTeam);
-
 // Variante con funzione
-for (var i = 0; i < footballTeam.length; i++) {
-  footballTeam[i].punti = generaNumero(1,10);
-  footballTeam[i].falli = generaNumero(1,10);
-  console.log(footballTeam[i]);
-}
-
-// Funzioni math random
-function generaNumero(min, max) {
-  return Math.floor(Math.random() * (max - min) + min);
-}
-
-// Classifica squadre
-
-footballTeam.sort(function(a,b) {
-  return b.punti - a.punti;
+footballTeam.forEach((element) => {
+  element.punti = Math.floor(Math.random() * (10-1) + 1);
+  element.falli = Math.floor(Math.random() * (10-1) + 1);
 });
-console.log("Classifica aggiornata:" , footballTeam);
+
+  console.log("L'array aggiornato è ", footballTeam);

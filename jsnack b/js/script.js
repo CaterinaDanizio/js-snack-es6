@@ -3,7 +3,7 @@
 
 // Array di biciclette
 
-var biciclette = [
+const biciclette = [
   {
   'name': "Warwind200",
   'weight': 7
@@ -34,7 +34,7 @@ console.log(biciclette);
 
 var biciLight = biciclette[0];
 
-for (var i = 0; i < biciclette.length; i++){
+for (let i = 0; i < biciclette.length; i++){
   if (biciLight.weight > biciclette[i].weight) {
     biciLight = biciclette[i];
   }

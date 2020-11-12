@@ -4,7 +4,7 @@
 // 1B:
 // Attraverso un prompt dare la possibilità all’utente di modificare il peso della palla.
 
-var palla = {
+const palla = {
   'nome': "palla",
   'peso': 10
 }
